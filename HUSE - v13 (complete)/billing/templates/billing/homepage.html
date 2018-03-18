@@ -1,0 +1,41 @@
+{%extends 'base_layout.html'%}
+{%block content%}
+<h3>{{message}}</h3>
+<div class="top-display">
+  <a href="{% url 'billing:records' %}">Billing Records</a>
+</div>
+<div class="billing-table">
+  <form class="" action="{% url 'billing:invoice' %}" method="post">
+    {% csrf_token %}
+    <div class="sub-form-accept">
+      <input type="submit" id="billing-sub" name="" value="Submit form">
+    </div>
+    <table id="inv-tab">
+      <thead>
+        <tr>
+          <td>Code</td>
+          <td>Quantity</td>
+          <td>Price</td>
+          <td>Total</td>
+        </tr>
+      </thead>
+        <tbody>
+          <tr id="d1">
+            <td> <input type="text" name="code" value="" onkeyup="td();" required=True> </td>
+            <td> <input type="number" id="q1" name="quantity" value="1" required=True onkeyup="calc('d1','q1','p1');td();"> </td>
+            <td> <input type="number" id="p1" name="price" value="0" required=True onkeyup="calc('d1','q1','p1');td();" > </td>
+            <td>0</td>
+          </tr>
+            <td colspan="3"> <button type="button" name="button" onclick="addRow();" style="width:100%;" >Add Row</button> </td>
+          <tr>
+            <td colspan="3">Grand Total</td>
+            <td id="gt">0</td>
+          </tr>
+        </tbody>
+    </table>
+    Inventory sales:<input type="checkbox" id="invsalech" name="invsale" onclick="un_ch2('servsalech')" value="1"><br>
+    Services sales:<input type="checkbox" id="servsalech" checked=True name="sersale" onclick="un_ch2('invsalech')" value="1"><br>
+    Buyer:<input type="text" name="buyer" id="bill-buyer" required=True placeholder="Buyer">
+  </form>
+</div>
+{% endblock %}

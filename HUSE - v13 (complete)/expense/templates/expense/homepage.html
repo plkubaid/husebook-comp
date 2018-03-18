@@ -1,0 +1,11 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+<h1>HOMEPAGE EXP</h1>
+
+<div class="exp-page-link">
+  <a href="{% url 'expense:irexp' %}">New Expense</a>
+  <a href="{% url 'expense:record' %}">Expense Record</a>
+</div>
+{% endblock %}

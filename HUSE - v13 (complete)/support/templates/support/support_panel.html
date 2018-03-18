@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Support Panel</title>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="top-display">
+        <h1>HuseBooks</h1>
+        <h3>Support For Everyone!</h3>
+      </div>
+      <a href="{% url 'accounts:logout' %}">Logout</a>
+    </div>
+    <div class="button-supp-panel">
+      <ul>
+        <li><a href="{% url 'support:ounseen' %}">OpenSupport Unseen ({{ou}})</a></li>
+        <li><a href="{% url 'support:oseen' %}">OpenSupport Seen</a></li>
+        <li><a href="{% url 'support:cunseen' %}">CustomerSupport Usneen ({{cu}})</a></li>
+        <li><a href="{% url 'support:cseen' %}">CustomerSupport Seen</a></li>
+        <li><a href="{% url 'support:sunseen' %}">Suggestion Unseen ({{su}})</a></li>
+        <li><a href="{% url 'support:sseen' %}">Suggestion Seen</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

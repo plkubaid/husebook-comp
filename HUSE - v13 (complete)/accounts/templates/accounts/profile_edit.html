@@ -1,0 +1,27 @@
+{% extends 'base_layout.html' %}
+{% block content%}
+<h2>{{red}}</h2>
+<div class="edit-form">
+  <form class="" action= "/accounts/profile/edit/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="profile-edit-detail">
+    <p><label for="id_first_name">First name:</label>
+      <input type="text" name="first_name" maxlength="150" id="id_first_name" value="{{data.first_name}}"></p>
+    <p><label for="id_last_name">Last name:</label>
+      <input type="text" name="last_name" maxlength="150" id="id_last_name" value="{{data.last_name}}"></p>
+    <p>
+      <input type="hidden" name="email" maxlength="200" id="id_email" value="{{data.email}}"></p>
+      <p><label for="id_business">Business:</label>
+      <input type="text" name="business" maxlength="200" required="" id="id_business" value="{{data.business}}"></p>
+      <input type="submit" name="" value="Save">
+    </div>
+    <div class="profile-edit-img">
+      <p>{%if data.profile_picture%}
+      <img src="{{data.profile_picture.url}}" alt="" id="pro_pic">
+      {% endif %}</p>
+      <p> <label for="id_profile_picture">Profile picture:</label>
+      <input type="file" name="profile_picture" id="id_profile_picture"></p>
+    </div>
+  </form>
+</div>
+{% endblock %}

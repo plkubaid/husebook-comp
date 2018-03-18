@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+
+
+{% block content %}
+<div class="open-supp">
+  <h1>Non-User Support</h1>
+  <h3>{{message}}</h3>
+  {% if form %}
+  <form class="open-supp-form" action="{% url 'support:unknown' %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="open-supp-form-submit" name="" value="Submit">
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

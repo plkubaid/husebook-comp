@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+
+
+{% block content %}
+<div class="suggestion">
+  <h1>User's Suggestion</h1>
+  <h3>{{message}}</h3>
+  {% if form %}
+  <form class="suggestion-form" action="{% url 'support:suggestion' %}" method="post">
+    {% csrf_token %}
+    <p>Email: {{data.email}}</p>
+    {{form.as_p}}
+    <input type="submit" class="suggestion-form-submit" name="" value="Submit">
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

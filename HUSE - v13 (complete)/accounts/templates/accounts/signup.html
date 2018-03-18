@@ -1,0 +1,30 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<h1>Accounts</h1>
+<h3>{{message}}</h3>
+<form class="" action="/accounts/signup/" method="post">
+  {% csrf_token %}
+  {%if user.is_authenticated%}
+  <h1>Alredy logged in!</h1>
+  {%else%}
+  <form class="" action="{% url 'accounts:signup' %}" method="post">
+    {% csrf_token %}
+
+    <p><label for="id_first_name">First name:</label> <input type="text" placeholder="First Name" name="first_name" required="" id="id_first_name"></p>
+    <p><label for="id_last_name">Last name:</label> <input type="text" name="last_name" placeholder="Last Name" required="" id="id_last_name"></p>
+    <p><label for="id_email">Email:</label> <input type="email" name="email" placeholder="Email" required="" id="id_email"></p>
+    <p><label for="id_business">Business Name</label> <input id="id_business" placeholder="Business Name" type="text" name="business" value=""> </p>
+    <p><label for="id_username">Username:</label> <input type="text" name="username" maxlength="150" placeholder="Username" autofocus="" required="" id="id_username"><br>
+    <span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span></p>
+    <p><label for="id_password1">Password:</label> <input type="password" placeholder="Password" minlength="8" name="password1" required="" id="id_password1"><br>
+    <span class="helptext"></span></p>
+    <ul>
+      <li>Your password should be more than 8 characters and cannot be entirely numeric</li>
+    </ul>
+    <p><label for="id_password2">Confirm Password:</label> <input type="password" placeholder="Confirm Password" minlength="8" name="password2" required="" id="id_password2"><br>
+     <input type="checkbox" required=True name="agr-check" value="agr"> <label for="checkb-agr">By submitting you accept our <a href="{% url 'accounts:terms' %}">Terms and Conditions</a> </label>
+    <input type="submit" name="" value="Signup">
+  {%endif%}
+</form>
+{% endblock %}

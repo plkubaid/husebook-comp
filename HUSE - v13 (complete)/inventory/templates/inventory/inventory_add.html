@@ -1,0 +1,11 @@
+{%extends 'base_layout.html'%}
+{% block content %}
+<h1>{{warn}}</h1>
+<form class="inventory-add" action="{% url 'inventory:add' %}" method="post">
+  {% csrf_token %}
+  <div class="inventory-form">
+    {{form.as_p}}
+  </div>
+  <input type="submit" id="inv-add-sub" value="Save">
+</form>
+{% endblock %}

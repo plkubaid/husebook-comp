@@ -1,0 +1,34 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<div class="dashboard-head">
+  <h1>Dashboard</h1>
+</div>
+<div class="data">
+  <table border="1px">
+
+    <thead>
+        <tr>
+          <td>Account for</td>
+          <td> Date</td>
+          <td>Profit Amount</td>
+          <td colspan="2">Status</td>
+        </tr>
+    </thead>
+    <tbody>
+      {% for point in data %}
+      <tr>
+        <td>{{b_info.business}}</td>
+        <td>{{point.date}}</td>
+        <td>{{point.profit}}</td>
+        {% if point.status %}
+        <td>Profit</td>
+        {% else %}
+        <td>Loss</td>
+        {% endif %}
+        <td> <a href="{% url 'accounting:detail' date=point.date %}">Deatil</a> </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

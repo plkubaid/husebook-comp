@@ -1,0 +1,328 @@
+body {
+  background-color: #b381811a;
+}
+.signup {
+    float:right;
+    padding-left:10px;
+}
+#sign-button {
+    height:25px;
+    width:100px;
+
+}
+.login {
+    text-align:right;
+}
+#login-button {
+    height:25px;
+    width:100px;
+}
+.nav-bar {
+    background-color:#220c841f;
+    border-left:solid 0.5px;
+    border-right: solid 0.5px;
+    border-radius:3px
+}
+
+#topheading img {
+    width:30%;
+}
+
+#main-heading {
+    text-align: center;
+}
+.side-text {
+    text-align: center;
+    padding: 5px;
+}
+.side-text h2 {
+    font-size:30px;
+}
+
+#id_username {
+    width:120px;
+}
+#id_password {
+    width:120px;
+}
+.login-form {
+    text-align:center;
+    padding-top:50px;
+    padding-bottom:50px;
+    margin-right:30%;
+    margin-left:30%;
+    border: solid 1px;
+    background-color:aliceblue;
+}
+
+h1 {
+    text-align:center;
+}
+.profile {
+    text-align: center;
+}
+
+.edit-button {
+    width:100px;
+    height:25px;
+    padding-left: 80%;
+}
+.nac-data a {
+    text-decoration:none;
+    color: chocolate;
+    border: 1px solid;
+    border-radius:3px;
+    padding-right:15px;
+    padding-left:15px;
+    padding-top: 3px;
+    padding-bottom:3px;
+    background-color:white;
+}
+.nac-data a:hover {
+    background-color:red;
+    color:wheat;
+    border: 1px solid black;
+    border-radius:3px;
+}
+.nac-data {
+    padding:7px;
+}
+.logout input {
+    padding-top:2px;
+    padding-left:8px;
+    padding-right:8px;
+    padding-bottom:2px;
+    color:rebeccapurple;
+}
+hr {
+    border: solid 0.5px;
+}
+.profile img {
+    width:255px;
+    height:254px;
+    border:solid 1px;
+}
+
+.profile-edit-img img {
+    width:150px;
+}
+.profile-edit-detail {
+    float:left;
+    padding-left: 20%;
+}
+.data table {
+    width: 90%;
+    margin: 0 auto;0
+}
+.data table td {
+    text-align:center;
+    padding:5px;
+    font-size:18px;
+}
+.acc-detail-tab table {
+    width:90%;
+    margin:0 auto;
+}
+.acc-detail-tab table td {
+    text-align:center;
+    padding:4px;
+    font-size: 18px;
+}
+.exp-page-link a {
+    text-decoration:none;
+    border:solid 1px;
+    padding:3px;
+    background-color:white;
+    color: black;
+}
+.exp-page-link {
+    text-align:center;
+    margin:0 20%;
+    padding-top:40px;
+    padding-bottom: 40px;
+    border:solid 1px
+}
+.ir-exp-input {
+    padding-top:30px;
+    padding-bottom:30px;
+    text-align:center;
+    margin: 0 20%;
+    border: solid 1px;
+}
+.ir-exp-name {
+    padding:10px
+}
+.ir-exp-cost {
+    padding-bottom:10px;
+}
+.exp-record-table {
+    width:80%;
+    text-align:center;
+    margin: 0 auto;
+}
+.exp-record-table td {
+    font-size: 19px;
+    padding: 4px
+}
+.billing-table tr input {
+    border:none;
+    background-color:transparent;
+    text-align:center;
+    width:100%;
+}
+.billing-table form {
+    margin: 0 10%;
+    text-align:left;
+}
+.billing-table form table {
+    margin:0 auto;
+    width:100%;
+}
+.billing-table form table tr {
+    height:20px;
+    width:fixed;
+    background-color:#16ce061f
+}
+.billing-table form table tr td {
+    height:20px;
+    text-align:center
+}
+#billing-sub {
+    border:solid 1px black;
+    float:right;
+    background-color:beige;
+    padding:4px;
+    color:blueviolet;
+    border-radius: 4px
+}
+.sub-form-accept {
+    float:right;
+    padding-bottom:10px;
+}
+#billing-sub:hover {
+    background-color:red;
+    color:white;
+}
+
+.billing-table form table tr input:hover {
+    border: solid 1px blue;
+    width:97%;
+    border-radius:3px;
+}
+
+#bill-buyer {
+    text-align:center;
+    margin: 1% 2%;
+    border: 1px solid black;
+}
+#bill-buyer:hover {
+    border: 1px solid blue;
+}
+.top-display a {
+    text-decoration:none;
+    border: solid 1px black;
+    padding:4px;
+    border-radius: 3px;
+    background-color:white;
+    color : blueviolet;
+    margin-left:10%
+
+}
+.top-display a:hover {
+    background-color:red;
+    color:white;
+}
+.invoice-record {
+    text-align:center;
+    border: solid 1px;
+    border-radius:3px;
+    padding-bottom:20px;
+    margin: 1% 10%;
+}
+.invoice-record input {
+    width:15%;
+    height:30px;
+    background-color: #ece1a485;
+    border: 1px solid black;
+    border-radius:4px;
+
+}
+.invoice-record input:hover {
+    background-color:#ff000045
+}
+.invoice-record h4 {
+    font-size:24px;
+    color:#035ee5;
+}
+.inv-home-menu {
+    padding-top:50px;
+    text-align: center;
+}
+.inv-home-menu a {
+    text-decoration:none;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 3px;
+    margin: 0 0.5%;
+    color: blueviolet;
+    background-color: white;
+}
+.inv-home-menu a:hover {
+    background-color: red;
+    color: white;
+}
+.inventory-update {
+    text-align:center;
+    padding-top:30px;
+    padding-bottom: 30px;
+    border: 1px solid;
+    margin: 0 30%;
+    border-radius:4px;
+    background-color:white;
+}
+#submit-inv-up {
+    border:1px solid;
+    background-color:transparent;
+    color: blueviolet;
+}
+#submit-inv-up:hover {
+    background-color:red;
+    color:white;
+    border:1px solid black;
+}
+.inventory-add {
+    text-align:center;
+    margin: 0 33%;
+    border:1px solid;
+    border-radius:5px;
+    padding:10px
+}
+.inventory-form {
+    text-align:center;
+}
+#inv-add-sub {
+    border:1px solid;
+    border-radius: 2px;
+    background-color:transparent;
+    color: blueviolet;
+    width:70px;
+    height:25px
+}
+#inv-add-sub:hover {
+    background-color:red;
+    color:white;
+    border: solid 1px black;
+}
+.content {
+    margin: 0 10%;
+    padding-bottom:40px;
+    padding-top: 20px;
+    background-color:#deb88763
+
+}
+.footer-main {
+    float:left;
+}
+.customer-supp h3 {
+    text-align:center
+}

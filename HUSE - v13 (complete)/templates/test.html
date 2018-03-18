@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    function addRow(){
+      var table = document.getElementById('table_inv');
+      var row = table.insertRow(table.rows.length-1);
+      var cell = row.insertCell(0);
+      cell.innerHTML = '<input type="text" name="data1" value="">';
+      var cell2 = row.insertCell(1);
+      cell2.innerHTML = '<input type="number" name="data2" value="">';
+    }
+    </script>
+  </head>
+  <body>
+    <form class="" action="/test/" method="post">
+      {% csrf_token %}
+      <table id="table_inv">
+        <tr>
+          <td>data</td>
+          <td>number</td>
+        </tr>
+        <tr>
+          <td> <input type="text" name="data1" value=""> </td>
+          <td> <input type="number" name="data2" value=""> </td>
+        </tr>
+        <tr>
+          <td colspan="2"> <button type="button" name="button" onclick="addRow();">add row</button> </td>
+        </tr>
+        <tr>
+          <td colspan="2" > <input type="submit" name="" value="submit"> </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="/static/invoice.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Invoice</h1>
+      {% if final %}
+      <div class="seller">
+        <div class="info">
+        <h2>Seller: {{data.business}}</h2>
+        <h3>Email: {{data.email}}</h3>
+      </div>
+      </div>
+    </div>
+    <div class="buyer">
+      <h2>Buyer: {{buyer}}</h2>
+    </div>
+    <div class="body">
+      <table>
+        <thead>
+          <tr>
+            <td>Item</td>
+            <td>Unit Price</td>
+            <td>Quantity</td>
+            <td>Amount</td>
+          </tr>
+        </thead>
+        <tbody>
+          {% for info in final %}
+          <tr>
+            <td>{{info.name}}</td>
+            <td>{{info.unit_price}}</td>
+            <td>{{info.quantity}}</td>
+            <td>{{info.price}}</td>
+          </tr>
+          {% endfor %}
+          <tr id="totalrow">
+            <td colspan="3" id="total-cell"><p id="total">Total</p></td>
+            <td id="price-cell"> <p id="price">{{price}}</p> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
+    <div class="footer">
+
+    </div>
+  </body>
+</html>

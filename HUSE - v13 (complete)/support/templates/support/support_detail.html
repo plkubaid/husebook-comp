@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Support</title>
+  </head>
+  <body>
+    {% for info in data %}
+    <div class="detail-info-supp">
+      <a href="{% url 'support:sdetail' id=info.id typo=tyyp %}">{{info}}</a>
+    </div>
+    {% endfor %}
+  </body>
+</html>
