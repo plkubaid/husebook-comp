@@ -5,7 +5,7 @@ from inventory.models import Inventory
 from.models import Invoice,TempTran,InvoiceRecord
 from django.db.models import Q
 from accounts.models import Profile
-from accounting.models import AccountsInvoice,TranRecord
+from z.models import AccountsInvoice,TranRecord
 import string
 import random
 

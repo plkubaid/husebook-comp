@@ -15,7 +15,7 @@ urlpatterns = [
     url(r'^accounts/', include('accounts.urls')),
     url(r'^$', views.turnpage),
     url(r'^inventory/',include('inventory.urls')),
-    url(r'^accounting/',include('accounting.urls')),
+    url(r'^accounting/',include('z.urls')),
     url(r'^billing/',include('billing.urls')),
     url(r'expense/',include('expense.urls')),
     url(r'^support/',include('support.urls')),

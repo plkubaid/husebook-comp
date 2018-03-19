@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from. import models as m
-from accounting import models as am
+from z import models as am
 
 # Create your views here.
 

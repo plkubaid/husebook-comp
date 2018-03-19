@@ -67,6 +67,9 @@ h1 {
     height:25px;
     padding-left: 80%;
 }
+#pro_pic {
+    padding-left:8%;
+}
 .nac-data a {
     text-decoration:none;
     color: chocolate;
@@ -317,7 +320,7 @@ hr {
     margin: 0 10%;
     padding-bottom:40px;
     padding-top: 20px;
-    background-color:#deb88763
+    background-color:#0000001c
 
 }
 .footer-main {
