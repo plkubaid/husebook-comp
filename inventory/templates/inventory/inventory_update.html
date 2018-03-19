@@ -1,9 +1,0 @@
-{% extends 'base_layout.html' %}
-{% block content %}
-<h1>{{warn}}</h1>
-<form class="inventory-update" action="{% url 'inventory:update' %}" method="post">
-  {% csrf_token %}
-  {{form.as_p}}
-  <input type="submit" id="submit-inv-up" name="" value="Update">
-</form>
-{% endblock %}
